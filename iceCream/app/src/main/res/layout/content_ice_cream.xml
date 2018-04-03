@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.maclab.icecream.iceCream"
+    tools:showIn="@layout/activity_ice_cream">
+
+    <Button
+        android:id="@+id/TheWorksPutton"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:onClick="theWorksButtonClicked"
+        android:text="The Work!"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ResetButton"
+        app:layout_constraintEnd_toStartOf="@+id/ResetButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ResetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetButtonClicked"
+        android:text="Reset"
+        app:layout_constraintBaseline_toBaselineOf="@+id/OrderButton"
+        app:layout_constraintEnd_toStartOf="@+id/OrderButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/TheWorksPutton" />
+
+    <Button
+        android:id="@+id/OrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="orderButtonClicked"
+        android:text="Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ResetButton" />
+
+    <CheckBox
+        android:id="@+id/AlmondsCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="checkBoxChanged"
+        android:text="Almonds"
+        app:layout_constraintBottom_toTopOf="@+id/MMsCheckBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/PeanutsCheckBox"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="checkBoxChanged"
+        android:text="Peanuts"
+        app:layout_constraintBottom_toTopOf="@+id/AlmondsCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
+
+    <CheckBox
+        android:id="@+id/BrownieCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="checkBoxChanged"
+        android:text="Brownie"
+        app:layout_constraintBottom_toTopOf="@+id/HotFudgeCheckBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/StrawberriesCheckbox"
+        android:layout_width="128dp"
+        android:layout_height="31dp"
+        android:onClick="checkBoxChanged"
+        android:text="Strawberries"
+        app:layout_constraintBottom_toTopOf="@+id/OreosCheckBox"
+        app:layout_constraintEnd_toEndOf="@+id/OreosCheckBox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <CheckBox
+        android:id="@+id/MMsCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="checkBoxChanged"
+        android:text="M&amp;Ms"
+        app:layout_constraintBottom_toTopOf="@+id/BrownieCheckBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/OreosCheckBox"
+        android:layout_width="130dp"
+        android:layout_height="33dp"
+        android:onClick="checkBoxChanged"
+        android:text="Oreos"
+        app:layout_constraintBottom_toTopOf="@+id/GummyBearsCheckBox"
+        app:layout_constraintEnd_toEndOf="@+id/GummyBearsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/StrawberriesCheckbox" />
+
+    <CheckBox
+        android:id="@+id/GummyBearsCheckBox"
+        android:layout_width="131dp"
+        android:layout_height="34dp"
+        android:onClick="checkBoxChanged"
+        android:text="Gummy Bears"
+        app:layout_constraintBottom_toTopOf="@+id/MarshmallowsCheckBox"
+        app:layout_constraintEnd_toEndOf="@+id/MarshmallowsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/OreosCheckBox" />
+
+    <CheckBox
+        android:id="@+id/MarshmallowsCheckBox"
+        android:layout_width="133dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="checkBoxChanged"
+        android:text="Marshmallows"
+        app:layout_constraintBottom_toTopOf="@+id/OrderButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GummyBearsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/HotFudgeCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:onClick="checkBoxChanged"
+        android:text="Hot Fudge"
+        app:layout_constraintBottom_toTopOf="@+id/TheWorksPutton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="142dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="3"
+        android:progress="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HotFudgeCheckBox" />
+
+    <TextView
+        android:id="@+id/seekBarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/ResetButton"
+        app:layout_constraintStart_toEndOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/priceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <Spinner
+        android:id="@+id/sizeSpinner"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/sizes"
+        app:layout_constraintBottom_toTopOf="@+id/PeanutsCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/flavorSpinner"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/flavors"
+        app:layout_constraintBottom_toTopOf="@+id/sizeSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">iceCream</string>
+    <string name="action_settings">Settings</string>
+    <string name="OrderHistory">Order History</string>
+    <string name="About">About</string>
+    <string-array name="flavors">
+        <item> Vanilla </item>
+        <item> Chocolate </item>
+        <item> Strawberry </item>
+    </string-array>
+    <string-array name="sizes">
+        <item> Small </item>
+        <item> Medium </item>
+        <item> Large </item>
+    </string-array>
+</resources>
